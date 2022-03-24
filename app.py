@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import tensorflow as tf
 from PIL import Image
-import shutil, os
+import os
 
 UPLOADED_PATH = 'uploaded_file/'
 
@@ -19,7 +19,7 @@ def hide():
     # components.html(my_html)
 
 def cleanup_file():
-    shutil.rmtree(UPLOADED_PATH, ignore_errors=True)
+    os.system("rm -r ", UPLOADED_PATH)
     os.mkdir(UPLOADED_PATH)
 
 
