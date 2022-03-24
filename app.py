@@ -19,7 +19,7 @@ def hide():
     # components.html(my_html)
 
 def cleanup_file():
-    os.system("rm -r ", UPLOADED_PATH)
+    os.system("rm -r " + UPLOADED_PATH)
     os.mkdir(UPLOADED_PATH)
 
 
