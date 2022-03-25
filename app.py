@@ -29,16 +29,16 @@ def main():
     st.write("hello world")
     st.write("Tensorflow: ", tf.__version__)
     st.write("cv2: ", cv2.__version__)
-    uploaded_file = st.file_uploader("Choose a file")
-    if uploaded_file is not None:
-        bytes_data = uploaded_file.getvalue()
-        with open(UPLOADED_PATH + uploaded_file.name,"wb") as binary_file:
-            binary_file.write(bytes_data)
-    if st.button('Run'):
-        os.system("rm -r yolov5/runs")
-        # os.system("python yolov5/detect.py --weights yolov5/yolov5l.pt --img 640 --conf 0.25 --source uploaded_file")
-        image = Image.open('yolov5/runs/detect/exp/' + uploaded_file.name)
-        st.image(image, caption='Finised')
+    # uploaded_file = st.file_uploader("Choose a file")
+    # if uploaded_file is not None:
+    #     bytes_data = uploaded_file.getvalue()
+    #     with open(UPLOADED_PATH + uploaded_file.name,"wb") as binary_file:
+    #         binary_file.write(bytes_data)
+    # if st.button('Run'):
+    #     os.system("rm -r yolov5/runs")
+    #     # os.system("python yolov5/detect.py --weights yolov5/yolov5l.pt --img 640 --conf 0.25 --source uploaded_file")
+    #     image = Image.open('yolov5/runs/detect/exp/' + uploaded_file.name)
+    #     st.image(image, caption='Finised')
 
 
 if __name__ == "__main__":
